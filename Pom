@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+
+ <groupId>com.seuprojeto</groupId>
+ <artifactId>uploader</artifactId>
+ <version>1.0.0</version>
+ <packaging>jar</packaging>
+
+ <name>Uploader</name>
+ <description>Spring Boot File Uploader com AWS S3</description>
+
+ <properties>
+ <java.version>17</java.version>
+ <spring.boot.version>3.1.0</spring.boot.version>
+ <aws.sdk.version>2.20.8</aws.sdk.version>
+ </properties>
+
+ <dependencies>
+ <!-- Spring Boot -->
+ <dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-web</artifactId>
+ </dependency>
+
+ <!-- JDBC + PostgreSQL -->
+ <dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-jdbc</artifactId>
+ </dependency>
+ <dependency>
+ <groupId>org.postgresql</groupId>
+ <artifactId>postgresql</artifactId>
+ <version>42.6.0</version>
+ </dependency>
+
+ <!-- AWS SDK v2 (S3) -->
+ <dependency>
+ <groupId>software.amazon.awssdk</groupId>
+ <artifactId>s3</artifactId>
+ <version>${aws.sdk.version}</version>
+ </dependency>
+
+ <!-- Upload Multipart -->
+ <dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-web</artifactId>
+ </dependency>
+
+ <!-- Utilitários -->
+ <dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-devtools</artifactId>
+ <scope>runtime</scope>
+ </dependency>
+
+ <dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-test</artifactId>
+ <scope>test</scope>
+ </dependency>
+ </dependencies>
+
+ <build>
+ <plugins>
+ <!-- Spring Boot plugin -->
+ <plugin>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-maven-plugin</artifactId>
+ </plugin>
+ </plugins>
+ </build>
+</project>
+
+
